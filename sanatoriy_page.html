@@ -5,6 +5,7 @@
     <title>Нафталан - Азербайджан</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/air_un.css">
+    <link rel="stylesheet" type="text/css" href="css/hystmodal.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -174,8 +175,12 @@
                   </div>
                   <div class="sanatoriy__pictures-column_small">
                      <div class="column_small__body">
-                        <div class="small__body-image"><img src="img/garabag_hotel/1U6A3395.jpg" alt=""></div>
-                        <div class="small__body-image"><img src="img/garabag_hotel/1U6A6193.jpg" alt=""></div>
+                        <a href="#" class="small__body-image"><img src="img/garabag_hotel/1U6A3395.jpg" alt="">
+                        <div class="gallery__image_icon">+7<svg class="icon  icon_play"><use xlink:href="symbol-defs.svg#icon-still_camera"></use></svg></div>
+                        </a>
+                        <a href="#" class="small__body-image"><img src="img/garabag_hotel/1U6A6193.jpg" alt="">
+                        <div class="gallery__image_icon">+3<svg class="icon  icon_play"><use xlink:href="symbol-defs.svg#icon-youtube"></use></svg></div>
+                        </a>
                      </div>
                   </div>
                </div>
@@ -413,7 +418,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="sanatoriy__booking-btn">Изменить поиск</div>
+                  <div class="sanatoriy__booking-btn" data-hystmodal="#myModal">Изменить поиск</div>
                </div>
             </div>
             
@@ -513,10 +518,17 @@
   
 
   
-           <!-- booking secton -->
-<div class="book-section__other">
+
+
+<!-- Modal booking start -->
+<div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+                          <!-- booking secton -->
+<div class="book-section__other book-section__modal">
 <!--    <form action="" method="get"> </form>-->
-    <div class="inner-book">
+    <div class="inner-book inner-book_shadow">
       <label class="booking__label" for="">
         <select class="booking__input" name="" id="" placeholder="Ночей">
            <option class="select__list"  selected>Все санатории</option>
@@ -611,11 +623,16 @@
     
 </div>
 <!-- booking secton ended -->
+            </div>
+
+            </div>
+            </div>
+<!-- Modal booking end -->
 
 
   
 <!--    Site Titles Section Start   -->
-<div class="section__main_titles">
+<div class="section__main_titles section__main_titles_margin">
    <div class="titles__container _container">
       <div class="section__main_title">Мы Поможем Вам Сделать Правильный Выбор Санатория</div>
       <div class="main_title__divider"><img src="img/elements/icon-accmod.png" alt=""></div>
@@ -821,6 +838,7 @@
     <script src="js/bs.js"></script>
     <script src="js/air-datepicker.js"></script>
 <!--    <script src="js/en.js"></script>-->
+   <script src="js/hystmodal.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/accordion_animation.js"></script>
 </body>

@@ -733,8 +733,13 @@ body.lock {
     padding: 1rem;
    border-radius: 10px;
    margin: 0px 10px;
+   
+}
+
+.inner-book_shadow {
    box-shadow: 0 5px 5px rgba(0,0,0,0.3); 
 }
+
 
 .inner-book1 input{
     padding: 18px 15px;
@@ -1072,6 +1077,12 @@ body.lock {
    text-align: center;
    
 }
+
+.section__main_titles_margin {
+   margin: 20px 0px;
+}
+
+
 .titles__container {
 }
 
@@ -1954,6 +1965,7 @@ f
    position: relative;
    padding-left: 15px;
    line-height: 18px;
+   color: #252B42;
 }
 
 .sanatorii__popular-item::before {
@@ -4837,7 +4849,7 @@ padding: 5px 10px;
    flex: 0 1 60%;
 }
 .result__sanatoriy-name {
-   font-size: 20px;
+   font-size: 22px;
    line-height: 24px;
    font-weight: 700;
    margin-bottom: 5px;
@@ -4875,7 +4887,7 @@ padding: 5px 10px;
 	flex: 0 1 30%;
 }
 
-.sanatorii__image-reyting2 {
+.sanatorii__image-reyting3 {
    position: absolute;
     right: -14px;
     top: -15px;
@@ -4886,6 +4898,14 @@ padding: 5px 10px;
     padding: 0px 0px 0px 7px;
     background-color: rgba(154, 205, 50, 0.81);
    z-index: 5;
+}
+
+.sanatorii__image-reyting3 span {
+   background-color: white;
+   color: grey;
+   display: inline-block;
+   margin-left: 7px;
+   padding: 3px;
 }
 
 @media (max-width: 991px) {
@@ -4918,37 +4938,44 @@ padding-bottom: 20px;
    
    .result__sanatoriy-info {
    padding: 0px 10px;
+   flex: 0 1 100%;   
 }
 
 .result__sanatoriy-image {
    flex: 0 1 100%;
-   
+   max-height: 230px;
+   min-height: auto;
 }
    
-   .result__sanatoriy-info {
-   flex: 0 1 100%;
-}
-   
-   .sanatorii__image-reyting2 {
+   .sanatorii__image-reyting3 {
     right: 0px;
     top: 0px;
    border-radius: 0px 5px 0px 0px;
       overflow: hidden;
+      font-size: 18px;
    }
    
-   .sanatorii__image-reyting2 span {
+   .sanatorii__image-reyting3 span {
 
+   }
+   
+   .result__sanatoriy-name {
+      font-size: 22px;
    }
 }
 
 @media (max-width: 400px) {
    .result__sanatoriy-name {
-      font-size: 16px;
+      font-size: 22px;
       margin-top: 10px;
    }
    .result__sanatoriy-place {
       font-size: 12px;
    }
+   
+   .result__sanatoriy-image {
+   max-height: 200px;
+}
    
    .result__sanatoriy-subinfo {
       

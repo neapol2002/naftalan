@@ -718,6 +718,11 @@ body.lock {
    margin-bottom: 30px;
 }
 
+.book-section__modal {
+   padding: 1rem 10px;
+   margin-bottom: 20px;
+}
+
 .inner-book{
     width: 95%;
     background: rgba(41, 20, 4, 0.71);
@@ -728,6 +733,7 @@ body.lock {
     padding: 1rem;
    border-radius: 10px;
    margin: 0px 10px;
+   box-shadow: 0 5px 5px rgba(0,0,0,0.3); 
 }
 
 .inner-book1 input{
@@ -996,6 +1002,10 @@ body.lock {
       margin-top: 0px;
       padding-top: 250px;
    }
+   
+   .book-section__modal {
+      margin: 30px 0px;
+   }
 }
 
 @media (max-width: 600px) {
@@ -1011,6 +1021,10 @@ body.lock {
       padding: 0px 10px;
       margin-top: 10px;
       margin-bottom: 10px;
+   }
+   
+   .book-section__modal {
+      margin: 40px 0px;
    }
 }
 
@@ -2252,12 +2266,19 @@ f
    height: 140px;
    overflow: hidden;
 /*   margin: 5px; */
+   position: relative;
+   transition: all 0.5s ease 0s;
 }
 
 .small__body-image img {
    width: 100%;
    height: 100%;
    object-fit: cover;
+   transition: all 0.5s ease 0s;
+}
+
+.small__body-image:hover.small__body-image img {
+   transform: scale(1.1);
 }
 
 @media (max-width: 991px) {
@@ -2611,10 +2632,12 @@ f
    font-size: 28px;
    font-weight: 700;
    margin-top: 7px;
+   
 }
 
 .sanatoriy__room-price span {
    font-size: 24px;
+   padding-left: 5px;
 }
 
 .sanatoriy__room-price_mans {
@@ -2748,7 +2771,8 @@ f
 /* Sanatoriy column left */
 
 .sanatoriy__column-left {
-   flex: 0 1 25%;
+   flex: 0 0 25%;
+   min-width: 270px;
    
 }
 
@@ -3969,6 +3993,15 @@ border: 1px solid #e8e7e7;
    line-height: 32px;
 }
 
+
+
+.sanatoriy__subtext1111::before {
+   content: url('../arrow-up.svg');
+   width: 40px;
+   height: 40px; 
+}
+
+
 /*Post tags and  shares*/
 
 .post_social {
@@ -4282,17 +4315,20 @@ padding: 7px 2px;
 }
 .gallery__row {
    display: flex;
-   justify-content: center;
+/*   justify-content: center;*/
+/*   margin: 0px -10px;*/
+   flex-wrap: wrap;
 }
 
 .gallery__column {
    flex: 0 1 33.333%;
    display: flex;
+   padding: 10px 10px;
 }
 
 .gallery__item {
    display: block;
-    margin: 10px 10px;
+/*    padding: 10px 10px;*/
     border: 1px solid #e8e7e7;
 /*    position: relative;*/
    box-shadow: 0px 4px 7px rgb(0 0 0 / 9%);
@@ -4301,6 +4337,7 @@ padding: 7px 2px;
    background-color: white;
    transition: all 0.5s ease 0s;
    width: 100%;
+   cursor: pointer;
 }
 
 .gallery__item:hover {
@@ -4312,6 +4349,7 @@ padding: 7px 2px;
     padding: 0 0 57% 0;
     overflow: hidden;
    margin-bottom: 10px;
+   display: block;
 }
 
 .gallery__image img,
@@ -4323,6 +4361,10 @@ padding: 7px 2px;
     height: 100%;
     object-fit: cover;
    transition: all 0.5s ease 0s;
+}
+
+.gallery_image_hide {
+   display: none;
 }
 
 .gallery__image_icon {
@@ -4357,11 +4399,15 @@ padding: 7px 2px;
 
 .gallery__title {
    font-weight: 700;
-   font-size: 20px;
+   font-size: 18px;
    margin-bottom: 10px;
    padding: 0px 10px 0px 10px;
    color: #1c1c1c;
    line-height: 26px;
+   display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
    transition: all 0.5s ease 0s;
   
 }
@@ -4370,7 +4416,7 @@ padding: 7px 2px;
    color: #5d5d00;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 890px) {
    .gallery__row {
       flex-wrap: wrap;
    }
@@ -4639,6 +4685,281 @@ padding: 5px 10px;
    margin: 10px 0px 10px;
    }
 }
+
+
+/* 404 section Styles */
+
+.page_404 {
+   background-color: white;
+}
+
+.container_404 {   
+}
+
+.p404__row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.p404__column {
+   flex: 0 1 50%;
+}
+
+.p404_item__left {
+   width: 100%;
+   height: 100%;
+}
+
+.p404_item__left img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.p404_item__right {
+}
+
+.p404__title {
+   font-weight: 700;
+   font-size: 50px;
+   margin-bottom: 10px;
+}
+
+.p404__subtitle {
+   font-size: 24px;
+   line-height: 30px;
+   margin-bottom: 20px;
+}
+
+.p404__link {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   height: 54px;
+/*   margin: -3px 5px 5px;*/
+   margin-bottom: 5px;
+    background-color: orangered;
+   line-height: 0;
+   color: white;
+   padding: 0px 20px;
+   font-size: 18px;
+   font-weight: 700;
+   transition: all 0.3s ease 0s;
+}
+
+.p404__link:hover {
+   background-color: #eb3f00;
+}
+
+@media (max-width: 800px) {
+   .p404__title {
+   font-weight: 700;
+   font-size: 40px;
+   margin-bottom: 10px;
+}  
+   .p404__subtitle {
+   font-size: 18px;
+   line-height: 22px;
+   margin-bottom: 15px;
+}
+   .p404__link {
+      font-size: 16px;
+      height: 50px;
+   }
+   
+}
+
+@media (max-width: 600px) {
+   .p404__row {
+      flex-wrap: wrap;
+   }
+   .p404__column {
+   flex: 0 1 100%;
+   padding: 5px 10px;
+}
+}
+
+
+/* Sanatoriy search results*/
+
+.search-result {
+   padding: 15px;
+   margin: 20px 10px 30px;
+   line-height: 22px;
+   background: #f5f5f5;
+   border-radius: 10px;
+   box-shadow: 0 0 8px #d1d1d1;
+   transition: all 0.3s ease 0s;
+   overflow: hidden;
+}
+
+.search-result:hover {
+   box-shadow: 0 0 8px #8dcfff;
+}
+
+
+.result__body {
+}
+
+.result__row {
+   display: flex;
+   position: relative;
+}
+
+.result__column1 {
+   flex: 0 1 70%;
+   border-right: 1px dashed #b4b4b4;
+}
+
+.result__sanatoriy-about {
+   display: flex;
+   
+}
+
+.result__sanatoriy-image {
+   flex: 0 1 40%;
+   border-radius: 15px;
+   overflow: hidden;
+   min-height: 250px;
+}
+
+.result__sanatoriy-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: all 0.5s ease 0s;
+   cursor: pointer;
+}
+.result__sanatoriy-info {
+   padding: 0px 15px;
+   flex: 0 1 60%;
+}
+.result__sanatoriy-name {
+   font-size: 20px;
+   line-height: 24px;
+   font-weight: 700;
+   margin-bottom: 5px;
+   margin-top: 15px;
+   color: black;
+}
+.result__sanatoriy-subinfo {
+   display: flex;
+   margin-bottom: 10px;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.result__sanatoriy-stars {
+   margin-right: 10px;
+}
+
+.icon-star-full {
+}
+.result__sanatoriy-place {
+   color: olive;
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+}
+.icon-location3 {
+   width: 15px;
+   fill: #aa8f00;
+}
+.sanatorii__popular-services {
+}
+.sanatorii__popular-item {
+}
+
+.result__column2 {
+	flex: 0 1 30%;
+}
+
+.sanatorii__image-reyting2 {
+   position: absolute;
+    right: -14px;
+    top: -15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0px 0px 0px 7px;
+    background-color: rgba(154, 205, 50, 0.81);
+   z-index: 5;
+}
+
+@media (max-width: 991px) {
+   .result__row {
+      flex-wrap: wrap;
+   }
+   
+   .result__column1 {
+	flex: 0 1 100%;
+      border-right: none;
+      border-bottom: 1px dashed #b4b4b4;
+padding-bottom: 20px;
+      margin-bottom: 20px;
+}
+   
+   .result__column2 {
+	flex: 0 1 100%;
+}
+   
+}
+
+@media (max-width: 540px) {
+   .search-result {
+   padding: 5px 5px 15px;
+   }
+   
+   .result__sanatoriy-about {
+   flex-wrap: wrap;
+}
+   
+   .result__sanatoriy-info {
+   padding: 0px 10px;
+}
+
+.result__sanatoriy-image {
+   flex: 0 1 100%;
+   
+}
+   
+   .result__sanatoriy-info {
+   flex: 0 1 100%;
+}
+   
+   .sanatorii__image-reyting2 {
+    right: 0px;
+    top: 0px;
+   border-radius: 0px 5px 0px 0px;
+      overflow: hidden;
+   }
+   
+   .sanatorii__image-reyting2 span {
+
+   }
+}
+
+@media (max-width: 400px) {
+   .result__sanatoriy-name {
+      font-size: 16px;
+      margin-top: 10px;
+   }
+   .result__sanatoriy-place {
+      font-size: 12px;
+   }
+   
+   .result__sanatoriy-subinfo {
+      
+   }
+   .icon-star-full {
+      width: 16px;
+   height: 16px;
+   }
+   
+}
+
 
 /*  Footer Styles */
 

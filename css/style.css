@@ -4440,6 +4440,7 @@ padding: 7px 2px;
 @media (max-width: 890px) {
    .gallery__row {
       flex-wrap: wrap;
+      margin: 0px -10px;
    }
    
    .gallery__column {

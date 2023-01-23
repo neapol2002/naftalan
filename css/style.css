@@ -2344,6 +2344,15 @@ f
 /*   width: 95%;*/
 }
 
+.sanatoriy__section-subname {
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.sanatoriy__section-name span {
+   padding-right: 5px;
+}
+
 .icon-double_arrow {
    margin: 0px 5px;
    width: 30px;
@@ -4792,6 +4801,36 @@ padding: 5px 10px;
    padding: 5px 10px;
 }
 }
+
+
+/* Sanatoriy search results sort*/
+
+.search-sort {
+}
+.search-sort__body {
+   padding: 10px 0px 0px;
+   display: flex;
+   justify-content: flex-end;
+}
+.search-sort__main {
+   padding: 0px 10px;
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   font-weight: 500;
+}
+.search-sort__title {
+   padding-right: 5px;
+}
+.select_search {
+   padding: 5px 5px 5px 5px;
+    background-color: #f2f1f1;
+    border-radius: 2px;
+    border: none;
+   outline: none;
+   font-size: 16px;
+}
+
 
 
 /* Sanatoriy search results*/

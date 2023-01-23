@@ -5027,6 +5027,12 @@ padding-bottom: 20px;
    
 }
 
+/* Lightgallery styles */
+
+img.lg-object.lg-image {
+    object-fit: cover;
+   min-height: 100%;
+}
 
 /*  Footer Styles */
 

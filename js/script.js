@@ -9,6 +9,7 @@ new AirDatepicker('#date_in', {
     // locale: localeEn
     startDate: new Date(),
     autoClose: true,
+    isMobile: true,
     minDate: new Date(),
     // language: 'en',
     // isMobile: true,

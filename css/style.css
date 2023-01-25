@@ -527,7 +527,7 @@ body.lock {
     position: fixed;
     right: -100%;
 /*    left: -100%;*/
-    top: 35px;
+    top: 37px;
     width: 40%;
     height: 100%;
     overflow: auto;
@@ -1072,6 +1072,7 @@ body.lock {
 }
 
 /* Site Main Titles Styles  */
+/* Site Main Titles Styles  */
 
 .section__main_titles {
    text-align: center;
@@ -1079,7 +1080,7 @@ body.lock {
 }
 
 .section__main_titles_margin {
-   margin: 20px 0px;
+   margin: 30px 0px 20px;
 }
 
 

@@ -5,6 +5,7 @@
     <title>Нафталан - Азербайджан</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/air_un.css">
+    <link rel="stylesheet" type="text/css" href="css/hystmodal.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -385,7 +386,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="sanatoriy__booking-btn">Изменить поиск</div>
+                  <div class="sanatoriy__booking-btn" data-hystmodal="#myModal">Изменить поиск</div>
                </div>
             </div>
             
@@ -494,11 +495,118 @@
 </div>
 <!--  Sanatoriy page main section End  -->
   
+<!-- Modal booking start -->
+<div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+                          <!-- booking secton -->
+<div class="book-section__other book-section__modal">
+<!--    <form action="" method="get"> </form>-->
+    <div class="inner-book inner-book_shadow">
+      <label class="booking__label" for="">
+        <select class="booking__input" name="" id="" placeholder="Ночей">
+           <option class="select__list"  selected>Все санатории</option>
+           <option class="select__list">Санаторий Чинар</option>
+           <option class="select__list">Санаторий Карабах</option>
+           <option class="select__list"> Санаторий Гашалты</option>
+           <option class="select__list"> Санаторий Кепез</option>
+        </select>
+        <span class="booking__span">Выбрать санаторий</span>
+        <svg class="icon  icon-arrow-down_b"><use xlink:href="symbol-defs.svg#icon-arrow-down"></use></svg>
+        </label>
+        
+        <label class="booking__label" for="">
+        <input class="booking__input cooming__date" type="text" id="date_in" placeholder="Заезд" >
+        <span class="booking__span">Дата заезда</span>
+        <svg class="icon  icon-arrow-down_b"><use xlink:href="symbol-defs.svg#icon-arrow-down"></use></svg>
+        </label>
+        
+<!--        <input type="text" placeholder="Ночей">-->
+       <label class="booking__label" for="">
+        <select class="booking__input" name="" id="" placeholder="Ночей">
+           <option class="select__list"  selected>7 Ночей</option>
+           <option class="select__list">8 Ночей</option>
+           <option class="select__list">9 Ночей</option>
+           <option class="select__list">10 Ночей</option>
+           <option class="select__list">11 Ночей</option>
+        </select>
+        <span class="booking__span">Количество ночей</span>
+        <svg class="icon  icon-arrow-down_b"><use xlink:href="symbol-defs.svg#icon-arrow-down"></use></svg>
+        </label>
+        <label class="booking__label" for="">
+<!--        <input class="booking__input" type="text" placeholder="2 взрослых">-->
+<!--
+        <select class="booking__input" name="" id="">
+           <option value="" selected>2 человека</option>  
+        </select>
+-->
+        <div class="booking__input-mans">2 человека</div>
+        <span class="booking__span">Количество отдыхающих</span>
+        <svg class="icon  icon-arrow-down_b"><use xlink:href="symbol-defs.svg#icon-arrow-down"></use></svg>
+        <div class="booking__mans-ekstra">
+          <span class="booking__quantity-label">Взрослых:</span>
+           <div class="actions-product__quantity quantity">
+                  <div class="quantity__button quantity__button_minus">-</div>
+                  <div class="quantity__input">
+                     <input autocomplete="off"  type="text" value="2" min="1" step="1" max="3">
+                  </div>
+                  <div class="quantity__button quantity__button_plus">+</div>
+               </div>
+               <div class="booking__quantity-child">
+                  <span class="quantity__child">Ребенок</span>
+                  <span class="quantity__child-age">8 лет</span>
+                  <span class="quantity__child-icon">&#10006;</span>
+<!--                  <span>&#10006;&#x2715;</span>-->
+               </div>
+               <div class="booking__quantity-child">
+                  <span class="quantity__child">Ребенок</span>
+                  <span class="quantity__child-age">8 лет</span>
+                  <span class="quantity__child-icon">&#10006;</span>
+<!--                  <span>&#10006;&#x2715;</span>-->
+               </div>
+               <label class="booking__label-child" for="">
+        <select class="booking__input-child" name="" id="" placeholder=" ">
+                                            <option disabled="" selected="">Возраст ребенка</option>
+                                            <option value="0 лет">0 лет</option>
+                                            <option value="1 год">1 год</option>
+                                            <option value="2 года">2 года</option>
+                                            <option value="3 года">3 года</option>
+                                            <option value="4 года">4 года</option>
+                                            <option value="5 лет">5 лет</option>
+                                            <option value="6 лет">6 лет</option>
+                                            <option value="7 лет">7 лет</option>
+                                            <option value="8 лет">8 лет</option>
+                                            <option value="9 лет">9 лет</option>
+                                            <option value="10 лет">10 лет</option>
+                                            <option value="11 лет">11 лет</option>
+                                            <option value="12 лет">12 лет</option>
+                                            <option value="13 лет">13 лет</option>
+                                            <option value="14 лет">14 лет</option>
+                                            <option value="15 лет">15 лет</option>
+                                            <option value="16 лет">16 лет</option>
+        </select>
+<!--        <span class="booking__span">Добавить ребенка</span>-->Добавить ребенка
+        </label>
+        </div>
+        </label>  
+        <div class="book-btn">
+            <a href="#">найти</a>
+        </div>
+    </div>
+   
+    
+</div>
+<!-- booking secton ended -->
+            </div>
 
+            </div>
+            </div>
+<!-- Modal booking end -->
   
   
 <!--    Site Titles Section Start   -->
-<div class="section__main_titles titles_margin">
+<div class="section__main_titles titles_margin section__main_titles_margin">
    <div class="titles__container _container">
       <div class="section__main_title">Мы Поможем Вам Сделать Правильный Выбор Санатория</div>
       <div class="main_title__divider"><img src="img/elements/icon-accmod.png" alt=""></div>
@@ -704,6 +812,7 @@
     <script src="js/bs.js"></script>
     <script src="js/air-datepicker.js"></script>
 <!--    <script src="js/en.js"></script>-->
+   <script src="js/hystmodal.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/accordion_animation.js"></script>
 </body>
